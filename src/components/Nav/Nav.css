@@ -1,4 +1,6 @@
 .navbar {
+    display: flex;
+    flex-direction: row;
     position: absolute;
     top: 0%;
     width: 100%;
@@ -7,19 +9,87 @@
 }
 
 .navlabel {
-    position: relative;
-    right: 22vw;
-    margin: auto;
-    top: 15%;
+position: absolute;
+top: 15%;
+left: 26%;
   
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
 }
 
 .navshelfie {
     position: absolute;
-    right: 40vw;
+    left: 120%;
     top: 20px;
-    color: white;
-    font-weight: 700;
-    font-size: 35px;
+}
 
+.shelfbar {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background: #AB2A19;
+    /* border: solid black 1px; */
+}
+
+.shelflabel {
+    position: relative;
+    left: 10%;
+    top: 17%;
+    /* border: solid black 1px; */
+}
+
+.shelf-letter {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+}
+
+.shelf-title {
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+
+.binlabel {
+    position: relative;
+    left: 3%;
+    top: 15%;
+    /* border: solid black 1px; */
+}
+
+.bin-shelf-letter {
+    position: absolute;
+    left: 10%;
+    width: 16%;
+    height: 100%;
+    background: #D34735;
+    /* border: solid black 1px; */
+}
+
+.bin-shelf-title {
+    position: absolute;
+    top: 29%;
+    left: 30%;
+}
+
+.bin-number {
+    position: absolute;
+    left: 26%;
+    width: 100%;
+    height: 100%;
+    background: #ED6B5A;
+    /* border: solid black 1px; */
+}
+
+.bin-title {
+    position: relative;
+    top: 29%;
+    right: 46%;
 }

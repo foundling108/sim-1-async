@@ -7,10 +7,25 @@ class Bin extends Component {
 
 
     render() {
+        console.log("askjdhgf")
         return(
-            <div>
-                Bins
-            </div>
+            <section className='bin-page'>
+                <div className='poduct-img' >
+                    <img src="" alt="product"/>
+                </div>
+                <section>
+                    <div  className='bin-input' >  
+                            Name
+                        <input type="text"/>
+                            Price
+                        <input type="text"/>
+                    </div>
+                    <div className='bin-buttons'>
+                        <button>EDIT</button>
+                        <button>DELETE</button>
+                    </div>
+                </section>
+            </section>
         )
     }
 }

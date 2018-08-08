@@ -9,6 +9,6 @@ export default (
     <Switch>
         <Route component={ Home } path='/' exact />
         <Route component={ Shelf } path='/shelves' />
-        <Route component={ Bin } path='/bins' />
+        <Route component={ Bin } path='/bin' />
     </Switch>
 )

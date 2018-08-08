@@ -1,0 +1,14 @@
+.bin-page {
+    width: 100%;
+    height: 100%;
+    background:  blue;
+}
+
+.product-img {
+    position: absolute;
+    top: 50%;
+    height: 250px;
+    width: 250px;
+    background: blue;
+    border: solid black 1px
+}
