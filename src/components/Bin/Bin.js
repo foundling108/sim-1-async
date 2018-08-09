@@ -7,22 +7,21 @@ class Bin extends Component {
 
 
     render() {
-        console.log("askjdhgf")
         return(
             <section className='bin-page'>
-                <div className='poduct-img' >
+                <div className='product-img' >
                     <img src="" alt="product"/>
                 </div>
-                <section>
+                <section className='add-product'>
                     <div  className='bin-input' >  
-                            Name
+                            <p>Name</p>
                         <input type="text"/>
-                            Price
-                        <input type="text"/>
+                            <p>Price</p>
+                            <input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$00.00"/>
                     </div>
-                    <div className='bin-buttons'>
-                        <button>EDIT</button>
-                        <button>DELETE</button>
+                    <div className='edel-container'>
+                        <button className='edit-delete'>EDIT</button>
+                        <button className='edit-delete'>DELETE</button>
                     </div>
                 </section>
             </section>

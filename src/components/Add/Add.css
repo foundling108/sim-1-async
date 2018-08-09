@@ -1,0 +1,18 @@
+.plus-product {
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    height: 40%;
+    width: 55%;
+    /* border: solid black 1px; */
+}
+
+.plus-button {
+    border: none;
+    border-radius: 40px;
+    background: #40F99B;
+    height: 75px;
+    width: 97%;
+    font-weight: 700;
+    font-size: 30px;
+} 

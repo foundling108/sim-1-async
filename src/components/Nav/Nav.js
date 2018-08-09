@@ -54,6 +54,22 @@ class Nav extends Component {
                 </section>
             )
         }
+
+        else if (this.props.location.pathname === '/add') {
+            return (
+                <section className='shelfbar'>
+                    <div className='binlabel'>
+                        <Link to='/'><img src="./logo.png" alt="SHELFIE-LOGO"/></Link>
+                    </div>
+                    <div className='bin-shelf-letter'>
+                        <Link to='/shelves'><h1 className='bin-shelf-title' >Shelf #</h1></Link>
+                    </div>
+                    <div className='bin-number'>
+                        <h1 className='add-title' > Add to Bin # </h1>
+                    </div>
+                </section>
+            )
+        }
     }
 }
 

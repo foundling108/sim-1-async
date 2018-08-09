@@ -1,14 +1,62 @@
-.bin-page {
-    width: 100%;
-    height: 100%;
-    background:  blue;
-}
-
 .product-img {
     position: absolute;
-    top: 50%;
+    top: 15%;
+    left: 7%;
     height: 250px;
     width: 250px;
-    background: blue;
+    background: green;
     border: solid black 1px
+}
+
+.add-product {
+    position: absolute;
+    top: 13%;
+    left: 26%;
+    height: 40%;
+    width: 55%;
+    /* border: solid black 1px; */
+}
+
+p {
+    position: relative;
+    right: 45%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+input {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    border: solid #ED6B5A 1px;
+    border-radius: 5px;
+    height: 75px;
+    width: 95%;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+input:hover {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    border: solid #AB2A19 3px;
+}
+
+.edel-container {
+    height: 75px;
+    /* border: solid black 1px; */
+}
+
+.edit-delete {
+    position: relative;
+    left: 13%;
+    margin-right: 275px;
+    height: 75px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    background: #D8D8D8;
+    font-weight: 700;
+    font-size: 30px;
 }
