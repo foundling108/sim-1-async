@@ -36,3 +36,9 @@ a {
     height: 100%;
     background: #D34735;
 }
+
+#plus-to-bin {
+    background: #FFB8AF;
+    color: black;
+    padding-right: 24%;
+}
