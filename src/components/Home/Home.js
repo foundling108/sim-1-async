@@ -20,10 +20,10 @@ class Home extends Component {
             </section>
             <section className='shelf-display'>
                
-                    <Link to='/shelves'><button className='shelf-buttons'>Shelf A</button></Link>
-                    <Link to='/shelves'><button className='shelf-buttons'>Shelf B</button></Link>
-                    <Link to='/shelves'><button className='shelf-buttons'>Shelf C</button></Link>
-                    <Link to='/shelves'><button className='shelf-buttons'>Shelf D</button></Link>
+                    <Link to='/shelves/A'><button className='shelf-buttons'>Shelf A</button></Link>
+                    <Link to='/shelves/B'><button className='shelf-buttons'>Shelf B</button></Link>
+                    <Link to='/shelves/C'><button className='shelf-buttons'>Shelf C</button></Link>
+                    <Link to='/shelves/D'><button className='shelf-buttons'>Shelf D</button></Link>
                 
             </section>
             </section>

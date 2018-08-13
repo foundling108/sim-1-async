@@ -9,7 +9,7 @@ import Add from './components/Add/Add';
 export default (
     <Switch>
         <Route component={ Home } path='/' exact />
-        <Route component={ Shelf } path='/shelves' />
+        <Route component={ Shelf } path='/shelves/:id' exact />
         <Route component={ Bin } path='/bin' />
         <Route component={ Add } path='/add' />
     </Switch>

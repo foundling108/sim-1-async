@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom';
 import './Add.css';
 
 class Add extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            name: '',
+            price: 0,
+            product_img: ''
+        }
+    }
 
 
     render() {

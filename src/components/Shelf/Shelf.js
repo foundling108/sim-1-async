@@ -18,7 +18,7 @@ class Shelf extends Component {
             </div>
             <div className='shelf-letter'>
                 <h1 className='shelf-title' >
-                    Shelf #
+                    SHELF {this.props.match.params.id}
                 </h1>
             </div>
             </section>
