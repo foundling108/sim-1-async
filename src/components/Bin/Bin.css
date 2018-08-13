@@ -1,3 +1,51 @@
+.shelfbar {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background: #AB2A19;
+    /* border: solid black 1px; */
+}
+
+.binlabel {
+    position: relative;
+    left: 3%;
+    top: 15%;
+    /* border: solid black 1px; */
+}
+
+.bin-shelf-letter {
+    position: absolute;
+    left: 10%;
+    width: 16%;
+    height: 100%;
+    background: #D34735;
+    /* border: solid black 1px; */
+}
+
+.bin-shelf-title {
+    position: absolute;
+    top: 29%;
+    left: 30%;
+}
+
+.bin-number {
+    position: absolute;
+    left: 26%;
+    width: 100%;
+    height: 100%;
+    background: #ED6B5A;
+    /* border: solid black 1px; */
+}
+
+.bin-title {
+    position: relative;
+    top: 29%;
+    right: 46%;
+}
+
 .product-img {
     position: absolute;
     top: 15%;

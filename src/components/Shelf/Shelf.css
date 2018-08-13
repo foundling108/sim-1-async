@@ -1,3 +1,33 @@
+.shelfbar {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background: #AB2A19;
+    /* border: solid black 1px; */
+}
+
+.shelflabel {
+    position: relative;
+    left: 10%;
+    top: 17%;
+    /* border: solid black 1px; */
+}
+
+.shelf-letter {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+}
+
+.shelf-title {
+    position: absolute;
+    left: 2%;
+    top: 30%;
+}
+
 .bin-display {
     position: absolute;
     margin: auto;

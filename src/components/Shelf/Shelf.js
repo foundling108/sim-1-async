@@ -11,6 +11,17 @@ class Shelf extends Component {
 
     render() {
         return(
+            <section>
+            <section className='shelfbar'>
+            <div className='shelflabel'>
+                <Link to='/'><img src="./logo.png" alt="SHELFIE-LOGO"/></Link>
+            </div>
+            <div className='shelf-letter'>
+                <h1 className='shelf-title' >
+                    Shelf #
+                </h1>
+            </div>
+            </section>
             <section className='bin-display'>
                
                     <Link to='/bin'><button className='bin-buttons'>Bin 1</button></Link>
@@ -20,6 +31,7 @@ class Shelf extends Component {
                     <Link to='/bin'><button className='bin-buttons'>Bin 5</button></Link>
                     <Link to='/add'><button className='bin-buttons' id='plus-to-bin'>+ Add to Bin</button></Link>
                 
+            </section>
             </section>
         )
     }

@@ -1,3 +1,33 @@
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background: #AB2A19;
+}
+
+.navlabel {
+position: absolute;
+top: 15%;
+left: 26%;
+  
+}
+
+h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.navshelfie {
+    position: absolute;
+    left: 120%;
+    top: 20px;
+}
+
 .shelf-display {
     position: absolute;
     margin: auto;
