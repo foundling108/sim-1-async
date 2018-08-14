@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const massive = require('massive');
 require('dotenv').config();
 
-// const shelf_controller = require( './controller/shelf_controller.js' );
+const shelf_controller = require( './controller/shelf_controller.js' );
 // const bin_controller = require( './controller/bin_controller' );
 
 const app = express();
@@ -20,13 +20,12 @@ massive(process.env.CONNECTION_STRING)
 
 //Shelf Controller
 
-app.get
+app.get('/api/shelf/:id', shelf_controller.readShelf);
 
 //Bin Controller
-app.post
-app.get
 app.get
 app.put
+app.post
 app.delete
 
 

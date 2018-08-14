@@ -10,7 +10,9 @@ export default (
     <Switch>
         <Route component={ Home } path='/' exact />
         <Route component={ Shelf } path='/shelves/:id' exact />
-        <Route component={ Bin } path='/bin' />
+        <Route component={ Bin } path='/shelf/:id/bin/:number' />
         <Route component={ Add } path='/add' />
     </Switch>
 )
+
+// apparently routes can be super long?

@@ -2,7 +2,7 @@ module.exports = {
     readShelf: ( req, res ) => {
         const dbInstance = req.app.get( 'db' );
 
-    dbInstance.readShelf([/*what goes here?*/])
+    dbInstance.read_shelf([req.params.id])
         .then( (shelf) => {
             res.status(200).send(shelf)})
         .catch( err => {
