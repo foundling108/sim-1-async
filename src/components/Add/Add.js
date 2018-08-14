@@ -23,10 +23,10 @@ class Add extends Component {
                 <Link to='/'><img src="./logo.png" alt="SHELFIE-LOGO"/></Link>
             </div>
             <div className='bin-shelf-letter'>
-                <Link to='/shelves'><h1 className='bin-shelf-title' >Shelf #</h1></Link>
+                <h1 className='bin-shelf-title' onClick={ () => this.props.history.goBack()}>SHELF {this.props.match.params.id}</h1>
             </div>
             <div className='bin-number'>
-                <h1 className='add-title' > Add to Bin # </h1>
+                <h1 className='add-title' > Add to Bin {this.props.match.params.number} </h1>
             </div>
             </section>
             <section>

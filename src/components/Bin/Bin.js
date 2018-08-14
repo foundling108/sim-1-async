@@ -34,7 +34,7 @@ class Bin extends Component {
                 <h1 className='bin-shelf-title' onClick={ () => this.props.history.goBack()} >SHELF {this.props.match.params.id}</h1>
             </div>
             <div className='bin-number'>
-                <h1 className='bin-title' > Bin # </h1>
+                <h1 className='bin-title' > Bin {this.props.match.params.number} </h1>
             </div>
             </section>
             <section className='bin-page'>
