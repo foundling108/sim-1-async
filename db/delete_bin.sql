@@ -1,5 +1,16 @@
-DELETE FROM shelfie
+UPDATE shelfie
+SET name = NULL,
+    price = NULL,
+    product_img = NULL
 WHERE shelf_letter = $1
-AND bin_number = $2;
+AND bin_number = $2
+
+RETURNING *
+
+-- DELETE FROM shelfie
+-- WHERE shelf_letter = $1
+-- AND bin_number = $2;
 
 -- Effect the bin # ONLY on its shelf(letter). Use the AND keyword.
+
+-- can use update to set things to null to 'delete' them.

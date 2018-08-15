@@ -22,8 +22,9 @@ class Shelf extends Component {
     handleBins() {
        axios.get(`/api/shelf/${this.props.match.params.id}`)
        .then( (res) => {
+           console.log(res.data)
            this.setState({
-               bin: res.data
+               bins: res.data
            })
        })
        .catch( (err) =>  {
@@ -34,30 +35,6 @@ class Shelf extends Component {
     // display bins by conditional db. Does the bin have stuff in it? dispay "bin #" else display "+ Add to Bin", that will send you to a DIFFERENT route '/add'.
 
     render() {
-
-        // let binOne = this.state.bins.map( (el, i) => (
-            //if statement based off of name = null.
-            /* if ( `${el.name} !== null && ${el.price} !== null` ){
-                return(
-                     <section className='bin-display'>
-                        <Link to=`/shelf/${el.shelf_number}/bin/${el.bin_number}`>
-                            <button className='bin-buttons'>
-                                Bin 1
-                            </button>
-                        </Link>
-                     </section>
-                )
-            } else { 
-                return(
-                    <Link to='/add'>
-                        <button className='bin-buttons' id='plus-to-bin'>
-                            + Add to Bin
-                        </button>
-                    </Link>
-                )
-             }*/
-        // ))
-
         return(
             <section>
             <section className='shelfbar'>
@@ -72,6 +49,12 @@ class Shelf extends Component {
             </section>
             <section className='bin-display'>
                
+                {/* { binOne }
+                { binTwo }
+                { binThree }
+                { binFour }
+                { binFive } */}
+
                     <Link to='/shelf/A/bin/1'><button className='bin-buttons'>Bin 1</button></Link>
                     <Link to='/shelf/A/bin/2'><button className='bin-buttons'>Bin 2</button></Link>
                     <Link to='/shelf/A/bin/3'><button className='bin-buttons'>Bin 3</button></Link>
@@ -86,3 +69,5 @@ class Shelf extends Component {
 }
 
 export default Shelf;
+
+

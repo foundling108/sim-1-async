@@ -1,5 +1,7 @@
 UPDATE shelfie
-SET name = $3, price = $3
+SET name = $3, 
+    price = $4,
+    product_img = $5
 WHERE shelf_letter = $1
 AND bin_number = $2
 

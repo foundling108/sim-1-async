@@ -13,4 +13,3 @@ module.exports = {
 }
 
 // This will allow the user to click the shelf (A-D) and see the bins on the shelf. 
-// It will also change the breadcrumb to the shelf letter the user clicked on.

@@ -16,7 +16,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
         
          
-        dbInstance.get_bin([/*Something something*/])
+        dbInstance.get_bin([req.params.bin_number])
         .then( ( shelf ) => res.status(200).send( shelf ))
         .catch( err => {
             res.status(500).send({errorMessage: "Could not get bin"});
@@ -28,7 +28,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
         const { name, price, product_img } = req.body;
 
-        dbInstance.edit_bin([ name, price, product_img ])
+        dbInstance.edit_bin([ req.params.bin_number, name, price, product_img ])
         .then( (shelf) => res.status(200).send(shelf) )
         .catch( err => {
             res.status(500).send({errorMessage: "Could not edit product"});
@@ -40,7 +40,7 @@ module.exports = {
         const dbInstance = req.app.get('db');
         const { params } = req;
 
-        dbInstance.shelf.delete_chapter([params.id])
+        dbInstance.shelf.delete_bin([params.bin_number])
         .then( (shelf) => res.status(200).send(shelf) )
         .catch( err => {
             res.status(500).send({errorMessage: "Could not delete"});
@@ -48,3 +48,4 @@ module.exports = {
         } );
     }
 }
+
