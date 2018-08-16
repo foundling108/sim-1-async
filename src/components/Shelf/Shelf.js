@@ -35,6 +35,12 @@ class Shelf extends Component {
     // display bins by conditional db. Does the bin have stuff in it? dispay "bin #" else display "+ Add to Bin", that will send you to a DIFFERENT route '/add'.
 
     render() {
+        // let binnyBinBins = this.state.bins.map((el, i) => (
+        //     <div>
+
+        //     </div>
+        // ))
+
         return(
             <section>
             <section className='shelfbar'>

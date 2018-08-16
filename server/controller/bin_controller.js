@@ -17,7 +17,7 @@ module.exports = {
         
          
         dbInstance.get_bin([req.params.bin_number])
-        .then( ( shelf ) => res.status(200).send( shelf ))
+        .then( ( bin ) => res.status(200).send( bin ))
         .catch( err => {
             res.status(500).send({errorMessage: "Could not get bin"});
             console.log(err)

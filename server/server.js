@@ -4,7 +4,7 @@ const massive = require('massive');
 require('dotenv').config();
 
 const shelf_controller = require( './controller/shelf_controller.js' );
-// const bin_controller = require( './controller/bin_controller' );
+const bin_controller = require( './controller/bin_controller' );
 
 const app = express();
 
@@ -23,10 +23,10 @@ massive(process.env.CONNECTION_STRING)
 app.get('/api/shelf/:id', shelf_controller.readShelf);
 
 //Bin Controller
-app.get
-app.put
-app.post
-app.delete
+app.get('/api/bin/:id', bin_controller.getBin);
+app.put('/api/bin/:id', bin_controller.editBin);
+app.post('/api/bin/:id', bin_controller.createProduct);
+app.delete('/api/bin/:id', bin_controller.deleteBin);
 
 
 const port =  process.env.PORT || 4000;
