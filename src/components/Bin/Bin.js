@@ -14,7 +14,7 @@ class Bin extends Component {
             product_img: ''
         }
         // price must be string because db is set to varchar(50)
-        this.getBin = this .getBin.bind(this);
+        this.getBin = this.getBin.bind(this);
         this.updateBin = this.updateBin.bind(this);
         this.deleteBin = this.deleteBin.bind(this);
 
@@ -84,11 +84,11 @@ class Bin extends Component {
                             <p>Name</p>
                         <input type="text"/>
                             <p>Price</p>
-                            <input type="text" placeholder="$00.00"/>
+                            <input type="text" placeholder="$"/>
                     </div>
                     <div className='edel-container'>
                         <button className='edit-delete'>EDIT</button>
-                        <button className='edit-delete'>DELETE</button>
+                        <button className='edit-delete' onClick={this.deleteBin} >DELETE</button>
                     </div>
                 </section>
             </section>
