@@ -25,8 +25,8 @@ app.get('/api/shelf/:id', shelf_controller.readShelf);
 //Bin Controller
 app.get('/api/bin/:shelf_letter/:bin_number', bin_controller.getBin);
 app.put('/api/bin/:shelf_letter/:bin_number', bin_controller.editBin);
-app.post('/api/bin/:shelf_letter/:bin_number', bin_controller.createProduct);
-app.delete('/api/bin/:id', bin_controller.deleteBin);
+app.put('/api/bin/:shelf_letter/:bin_number', bin_controller.createProduct);
+app.put('/api/bin/:shelf_letter/:bin_number', bin_controller.deleteBin);
 
 
 const port =  process.env.PORT || 4000;

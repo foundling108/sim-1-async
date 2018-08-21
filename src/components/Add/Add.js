@@ -17,6 +17,7 @@ class Add extends Component {
         this.addName = this.addName.bind(this);
         this.addPrice = this.addPrice.bind(this);
         this.addImage = this.addImage.bind(this);
+        this.addToInventory = this.addToInventory.bind(this);
     }
 
     addName(value) {
@@ -38,24 +39,12 @@ class Add extends Component {
     }
 
     addToInventory() {
-        axios.post(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`, 
+        axios.put(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`, 
                   {name: this.state.name, price: this.state.price})
+                  .then( () => {
+                    this.props.history.goBack()
+                  } )
     }
-
-    componentDidMount(){
-        axios.get(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`)
-             .then(res => {
-                this.setState({
-                    name: res.data[0].name,
-                    price: res.data[0].price
-                })
-                })
-             .catch(err => {
-                console.log(err)
-        })
-    }
-
-
 
     render() {
         return(

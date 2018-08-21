@@ -61,11 +61,12 @@ class Bin extends Component {
     }
 
     deleteBin() {
-        axios.delete(`/api/bin/${this.props.match.params.id}${this.props.match.params.number}`)
+        axios.put(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`)
         .then(() => {
             this.setState({
-                name: '', 
-                price: ''
+                name: null, 
+                price: null,
+                product_img: null
             })
             this.props.history.goBack()
             //Thanks Andy

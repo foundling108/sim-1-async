@@ -41,9 +41,10 @@ module.exports = {
 
     deleteBin: (req, res) => {
         const dbInstance = req.app.get('db');
-        const { params } = req;
+        const { shelf_letter, bin_number } = req.params
+        const { name, price, product_img } = req.body;
 
-        dbInstance.shelf.delete_bin([params.bin_number])
+        dbInstance.shelf.delete_bin([ shelf_letter, bin_number, name, price, product_img])
         .then( (shelf) => res.status(200).send(shelf) )
         .catch( err => {
             res.status(500).send({errorMessage: "Could not delete"});
