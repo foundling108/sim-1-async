@@ -9,33 +9,44 @@ class Bin extends Component {
         super(props)
 
         this.state = {
+            edit: false,
             name: '',
             price: '',
             product_img: ''
         }
         // price must be string because db is set to varchar(50)
-        this.getBin = this.getBin.bind(this);
         this.updateBin = this.updateBin.bind(this);
         this.deleteBin = this.deleteBin.bind(this);
-
+        this.editName = this.editName.bind(this);
+        this.editPrice = this.editPrice.bind(this);
+        this.editAndSave = this.editAndSave.bind(this);
 
     }
 
     componentDidMount() {
-        this.getBin();
+            axios.get(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`)
+                 .then(res => {
+                    console.log(res.data)
+                    this.setState({
+                        name: res.data[0].name,
+                        price: res.data[0].price,
+                        product_img: res.data[0].product_img
+                    });
+                    })
+                 .catch(err => {
+                    console.log(err)
+            })
+        }
+
+    editAndSave() {
+        axios.put(`/api/bin/${this.props.match.params.id}/${this.props.match.params.number}`,
+                 { name: this.state.name, price: this.state.price })
+                 
+                 this.setState({
+                    edit: !this.state.edit
+                 })
     }
 
-    getBin() {
-        axios.get(`/api/bin/${this.props.match.params.id}${this.props.match.params.number}`)
-        .then( (res) => {
-            this.setState({
-                name: res.data.name,
-                price: res.data.price,
-                product_img: res.data.product_img
-            })
-        })
-        .catch((err) => {console.log(err)})
-    }
 
     updateBin() {
         axios.put(`/api/bin/${this.props.match.params.id}${this.props.match.params.number}`, 
@@ -61,6 +72,18 @@ class Bin extends Component {
         }).catch((err) => {console.log(err)})
     }
 
+    editName(value) {
+        this.setState({
+            name: value
+        })
+    }
+
+    editPrice(value) {
+        this.setState({
+            price: value
+        })
+    }
+
     render() {
         return(
             <section>
@@ -77,17 +100,24 @@ class Bin extends Component {
             </section>
             <section className='bin-page'>
                 <div className='product-img' >
-                    <img src="" alt="product"/>
+                    <img src={this.state.product_img} alt="product"/>
                 </div>
                 <section className='add-product'>
                     <div  className='bin-input' >  
                             <p>Name</p>
-                        <input type="text"/>
+                        <input type="text" onChange={e => {this.editName(e.target.value)}} placeholder={this.state.name} disabled={!this.state.edit}/>
                             <p>Price</p>
-                            <input type="text" placeholder="$"/>
+                            <input type="text"  onChange={e => {this.editPrice(e.target.value)}} placeholder={this.state.price} disabled={!this.state.edit}/>
                     </div>
                     <div className='edel-container'>
-                        <button className='edit-delete'>EDIT</button>
+
+                    { this.state.edit === false
+                        ?
+                        <button className='edit-delete' onClick={this.editAndSave}>EDIT</button>
+                        :
+                        <button className='edit-delete' id='save-button' onClick={this.editAndSave} >SAVE</button>
+                    }
+
                         <button className='edit-delete' onClick={this.deleteBin} >DELETE</button>
                     </div>
                 </section>
@@ -98,3 +128,4 @@ class Bin extends Component {
 }
 
 export default Bin;
+

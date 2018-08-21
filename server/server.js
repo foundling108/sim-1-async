@@ -23,9 +23,9 @@ massive(process.env.CONNECTION_STRING)
 app.get('/api/shelf/:id', shelf_controller.readShelf);
 
 //Bin Controller
-app.get('/api/bin/:id', bin_controller.getBin);
-app.put('/api/bin/:id', bin_controller.editBin);
-app.post('/api/bin/:id', bin_controller.createProduct);
+app.get('/api/bin/:shelf_letter/:bin_number', bin_controller.getBin);
+app.put('/api/bin/:shelf_letter/:bin_number', bin_controller.editBin);
+app.post('/api/bin/:shelf_letter/:bin_number', bin_controller.createProduct);
 app.delete('/api/bin/:id', bin_controller.deleteBin);
 
 

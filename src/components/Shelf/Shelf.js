@@ -31,7 +31,7 @@ class Shelf extends Component {
            console.log(err)
        })
     }
-
+    
     render() {
         let binDisplay = this.state.bins.map( (el, i) =>{
             if(el.name === null && el.price === null){

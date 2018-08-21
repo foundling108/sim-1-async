@@ -108,3 +108,8 @@ input:hover {
     font-weight: 700;
     font-size: 30px;
 }
+
+#save-button {
+    border-radius: 50px;
+    background: #40F99B;
+}
